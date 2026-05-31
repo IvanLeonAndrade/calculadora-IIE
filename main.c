@@ -1,3 +1,11 @@
+/*
+  Copyright 2026 - Iván Leon Andrade Franco
+  Calculadora Portatil - Principal
+
+  - Divisor De Tension
+  - Resistencia Paralelo [2 Resistencias]
+  - Frecuencia de Corte
+*/
 
 #include <string.h>
 
@@ -16,7 +24,7 @@ int main(void) {
 
   while (fgets(buffer, sizeof(buffer), stdin)) {
     buffer[strcspn(buffer, "\n")] = '\0';
-    
+
     if (buffer[0] == '\0') {
       continue;
     }
