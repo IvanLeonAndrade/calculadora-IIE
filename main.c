@@ -6,11 +6,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const char *opciones[] = {"o", "1", "2", "3", "cls", "exit"};
+const char *opciones[] = {"1", "2", "3", "cls", "exit"};
 int total_opciones = sizeof(opciones) / sizeof(opciones[0]);
 
 int main(void) {
-  start_calculadora();
+  operaciones();
 
   char buffer[20];
 
@@ -39,18 +39,18 @@ int main(void) {
     } else if (strcmp(buffer, "1") == 0) {
       guia_user_rp();
       calcular_resistencia_paralelo();
-      start_calculadora();
+      operaciones();
     } else if (strcmp(buffer, "2") == 0) {
       guia_user_divisor_tension();
       calcular_divisor_tension();
-      start_calculadora();
+      operaciones();
     } else if (strcmp(buffer, "3") == 0) {
       guia_frecuencia_corte();
       frecuencia_de_corte();
-      start_calculadora();
+      operaciones();
     } else if (strcmp(buffer, "cls") == 0) {
       system("cls");
-      start_calculadora();
+      operaciones();
     }
   }
 

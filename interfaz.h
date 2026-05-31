@@ -9,31 +9,21 @@
 #include <stdio.h>
 
 void operaciones(void) {
+  printf("\n***Calculadora Elemental Para Circuitos***\n");
+
   printf("\nEquivalencia R Paralelo [1]\n");
   printf("Divisor de Tension [2]\n");
-  printf("Frecuencia de Corte [3]\n");
-}
-
-void comandos(void) {
-  printf("Exit [x]\n");
-  printf("clear [cls]\n\n");
-}
-
-void start_calculadora(void) {
-  printf("\n***Calculadora De Operaciones Basicas Para Electronica***\n");
-  printf("- Operaciones [o]\n");
+  printf("Frecuencia de Corte [3]\n\n");
 }
 
 void guia_user_divisor_tension(void) {
-  printf("\n***Calculadora Divisor de Tension - Respecto R1***\n");
+  printf("\n***Divisor de Tension - Respecto R1***\n");
 }
 
 void guia_user_rp(void) {
-  printf(
-      "\n***Calculadora Resistencia Paralelo - Solo para 2 Resistores***\n\n");
+  printf("\n***Equivalencia Paralelo- 2 Resistencias***\n\n");
 }
 
 void guia_frecuencia_corte(void) {
-   printf("\n***Calculadora Frecuencia De Corte - RC***\n");
+  printf("\n***Frecuencia De Corte - Circuito RC***\n");
 }
-
