@@ -8,10 +8,7 @@
 */
 #include <stdio.h>
 
-void guia_user_rp(void) {
-  printf(
-      "\n***Calculadora Resistencia Paralelo - Solo para 2 Resistores***\n\n");
-}
+
 
 void operaciones(void) {
   printf("\nEquivalencia R Paralelo [1]\n");
@@ -24,16 +21,21 @@ void comandos(void) {
   printf("clear [cls]\n\n");
 }
 
+void start_calculadora(void) {
+  printf("\n***Calculadora De Operaciones Basicas Para Electronica***\n");
+  printf("- Operaciones [o]\n");
+}
+
 void guia_user_divisor_tension(void) {
   printf("\n***Calculadora Divisor de Tension - Respecto R1***\n");
 }
 
-void start_calculadora(void) {
-  printf("\n***Calculadora De Operaciones Basicas Para Electronica***\n");
-  printf("- Operaciones [o]\n");
-  printf("- Comandos [c]\n");
+void guia_user_rp(void) {
+  printf(
+      "\n***Calculadora Resistencia Paralelo - Solo para 2 Resistores***\n\n");
 }
 
 void guia_frecuencia_corte(void) {
    printf("\n***Calculadora Frecuencia De Corte - RC***\n");
 }
+

@@ -6,8 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-const char *opciones []= {"o", "c", "x", "1", "2", "3", "cls"};
+const char *opciones[] = {"o", "1", "2", "3", "cls", "exit"};
 int total_opciones = sizeof(opciones) / sizeof(opciones[0]);
 
 int main(void) {
@@ -18,25 +17,23 @@ int main(void) {
   while (fgets(buffer, sizeof(buffer), stdin)) {
     buffer[strcspn(buffer, "\n")] = '\0';
     if (buffer[0] == '\0') {
-        continue; 
+      continue;
     }
     int valida = 0;
-    for(int i = 0; i < total_opciones; i++) {
-      if(strcmp(buffer, opciones[i]) == 0) {
+    for (int i = 0; i < total_opciones; i++) {
+      if (strcmp(buffer, opciones[i]) == 0) {
         valida = 1;
         break;
       }
     }
-    if(valida == 0) {
+    if (valida == 0) {
       fprintf(stderr, "Error: Opcion no valida. Intente de nuevo.\n");
       continue;
     }
 
     if (strcmp(buffer, "o") == 0) {
       operaciones();
-    } else if (strcmp(buffer, "c") == 0) {
-      comandos();
-    } else if (strcmp(buffer, "x") == 0) {
+    } else if (strcmp(buffer, "exit") == 0) {
       printf("Exit\n");
       break;
     } else if (strcmp(buffer, "1") == 0) {
