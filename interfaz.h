@@ -8,8 +8,6 @@
 */
 #include <stdio.h>
 
-
-
 void operaciones(void) {
   printf("\nEquivalencia R Paralelo [1]\n");
   printf("Divisor de Tension [2]\n");

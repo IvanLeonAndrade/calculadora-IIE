@@ -13,50 +13,55 @@
   @v_i: Tension Del Divisor
   @c: Capacitancia
 */
-struct valores {
+struct parametros {
   double r_1, r_2;
   double v_i;
   double c;
   double resultado;
+};
 
-}val;
-
-const int pi = 3.141592;
+const double PI = 3.141592;
  
 int calcular_resistencia_paralelo(void) {
-  printf("R1? ");
-  scanf("%lf", &val.r_1);
-  printf("R2? ");
-  scanf("%lf", &val.r_2);
+  struct parametros variable = {0};
 
-  val.resultado = val.r_1 * val.r_2 / (val.r_1 + val.r_2);
-  printf("%.3f || %.3f = %.3f\n\n", val.r_1, val.r_2, val.resultado);
+  printf("R1? ");
+  scanf("%lf", &variable.r_1);
+  printf("R2? ");
+  scanf("%lf", &variable.r_2);
+
+  variable.resultado = variable.r_1 * variable.r_2 / (variable.r_1 + variable.r_2);
+  printf("%.3f || %.3f = %.3f\n\n", variable.r_1, variable.r_2, variable.resultado);
 
   return 0;
 }
 
 int calcular_divisor_tension(void) {
-  printf("R1? ");
-  scanf("%lf", &val.r_1);
-  printf("R2? ");
-  scanf("%lf", &val.r_2);
-  printf("Vi? ");
-  scanf("%lf", &val.v_i);
+  struct parametros variable = {0};
 
-  val.resultado = val.v_i * val.r_1 / (val.r_1 + val.r_2);
-  printf("Vout: %f con R1 = %f Y R2 = %f\n\n", val.resultado, val.r_1, val.r_2);
+  printf("R1? ");
+  scanf("%lf", &variable.r_1);
+  printf("R2? ");
+  scanf("%lf", &variable.r_2);
+  printf("Vi? ");
+  scanf("%lf", &variable.v_i);
+
+  variable.resultado = variable.v_i * variable.r_1 / (variable.r_1 + variable.r_2);
+  printf("Vout: %f con R1 = %f Y R2 = %f\n\n", variable.resultado, variable.r_1, variable.r_2);
 
   return 0;
 }
 
 int frecuencia_de_corte(void) {
-  printf("R? ");
-  scanf("%lf", &val.r_1);
-  printf("C? ");
-  scanf("%lf", &val.c);
+  struct parametros variable = {0};
 
-  val.resultado =  1 / (2 * pi * val.r_1 * val.c);
-  printf("La FC: %f de R: %f y C: %f\n", val.resultado, val.r_1, val.c);
+  printf("R? ");
+  scanf("%lf", &variable.r_1);
+  printf("C? ");
+  scanf("%lf", &variable.c);
+
+  variable.resultado =  1 / (2 * PI * variable.r_1 * variable.c);
+  printf("La FC: %f de R: %f y C: %f\n", variable.resultado, variable.r_1, variable.c);
 
   return 0;
 }
