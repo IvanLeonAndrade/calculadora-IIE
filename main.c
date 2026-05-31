@@ -16,9 +16,11 @@ int main(void) {
 
   while (fgets(buffer, sizeof(buffer), stdin)) {
     buffer[strcspn(buffer, "\n")] = '\0';
+    
     if (buffer[0] == '\0') {
       continue;
     }
+
     int valida = 0;
     for (int i = 0; i < total_opciones; i++) {
       if (strcmp(buffer, opciones[i]) == 0) {
@@ -26,6 +28,7 @@ int main(void) {
         break;
       }
     }
+
     if (valida == 0) {
       fprintf(stderr, "Error: Opcion no valida. Intente de nuevo.\n");
       continue;
