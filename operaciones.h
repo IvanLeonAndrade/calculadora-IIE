@@ -20,7 +20,7 @@ struct valores {
   double resultado;
 
 }val;
-
+//borrar
 const int pi = 3.141592;
  
 int calcular_resistencia_paralelo(void) {
