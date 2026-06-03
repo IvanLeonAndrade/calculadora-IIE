@@ -5,6 +5,8 @@
   - Divisor De Tension
   - Resistencia Paralelo [2 Resistencias]
   - Frecuencia de Corte
+  - Tiempo de Crecimiento
+  - Transitorio Capacitor
 */
 
 #include <string.h>
@@ -14,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const char *opciones[] = {"1", "2", "3", "cls", "exit"};
+const char *opciones[] = {"1", "2", "3", "4", "5", "cls", "exit"};
 int total_opciones = sizeof(opciones) / sizeof(opciones[0]);
 
 int main(void) {
@@ -56,10 +58,20 @@ int main(void) {
       calcular_divisor_tension();
       operaciones();
     } else if (strcmp(buffer, "3") == 0) {
-      guia_frecuencia_corte();
+      guia_user_frecuencia_corte();
       frecuencia_de_corte();
       operaciones();
-    } else if (strcmp(buffer, "cls") == 0) {
+    } else if (strcmp(buffer, "4") == 0) {
+      guia_user_tiempo_crecimiento();
+      tiempo_de_crecimiento();
+      operaciones();
+    } else if (strcmp(buffer, "5") == 0) {
+      guia_user_respuesta_transitoria_capacitor();
+      transitirio_capacitor();
+      operaciones();
+    }
+
+    else if (strcmp(buffer, "cls") == 0) {
       system("cls");
       operaciones();
     }
